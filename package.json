@@ -1,7 +1,7 @@
 {
-  "name": "guestbook",
+  "name": "template",
   "version": "0.1.0",
-  "description": "A simple application to demonstrate authenticationg.",
+  "description": "your description here.",
   "main": "app.js",
   "scripts": {
     "test": "grunt jasmine-nodejs",
@@ -9,19 +9,7 @@
   },
   "author": "Charlton Wilbur",
   "license": "BSD-3-Clause",
-  "dependencies": {
-    "async": "^1.2.1",
-    "body-parser": "^1.13.1",
-    "connect-mongodb-session": "^1.0.2",
-    "express": "^4.13.0",
-    "express-session": "^1.11.3",
-    "jade": "^1.11.0",
-    "mongoose": "^4.0.6",
-    "mongoose-autopopulate": "^0.1.0",
-    "passport": "^0.2.2",
-    "passport-anonymous": "^1.0.1",
-    "passport-github2": "^0.1.9"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-blanket": "0.0.8",
@@ -45,17 +33,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cwilbur/node_demo.git"
+    "url": "git+https://github.com/cwilbur/node-project-template.git"
   },
   "keywords": [
-    "tictactoe",
     "node",
-    "demo",
+    "scaffolding",
     "grunt",
     "configuration"
   ],
   "bugs": {
-    "url": "https://github.com/cwilbur/node_demo/issues"
+    "url": "https://github.com/cwilbur/node-project-template/issues"
   },
-  "homepage": "https://github.com/cwilbur/node_demo#readme"
+  "homepage": "https://github.com/cwilbur/node-project-template#readme"
 }
