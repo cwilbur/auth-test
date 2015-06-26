@@ -1,0 +1,26 @@
+{
+  "options": {
+    "ignore": [
+      "node_modules/**",
+      "<%= paths.tests =>"
+    ],
+    "ext": "js",
+    "watch": ["<%= paths.source %>"],
+    "delay": 5
+  },
+
+  "develop": {
+    "script": "<%= package.main %>"
+  },
+
+  "debug": {
+    "script": "<%= package.main %>",
+    "options": {
+      "nodeArgs": [
+        "--debug-brk"
+      ]
+
+    }
+
+  }
+}
