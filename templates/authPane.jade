@@ -1,0 +1,15 @@
+#login.panel.panel-default
+    .panel-heading Authentication
+    .panel-body
+        if user
+            | You are logged in as #{ user.username } (#{ user.displayName }).
+            br
+            button.btn.btn-primary(id='logout-button' type='button') Log me out
+        else
+            | You are not currently logged in.
+            br
+            .input-group
+                input.form-control(type='text' id='login-user' placeholder='Username')
+                input.form-control(type='password' id='login-password' placeholder='Password')
+                button.btn.btn-primary(id='login-button' type='button') Log me in!
+

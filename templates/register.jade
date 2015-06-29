@@ -1,0 +1,40 @@
+#register.panel.panel-default
+  .panel-heading Register a New User
+  .panel-body
+    if user
+      | Please log out first.
+    else
+      .form-horizontal
+      .control-group
+        label.control-label(for='github-id') Github ID
+        .controls
+          input.form-control(type='text' id='github-id' placeholder='Any 7-digit number' required='')
+
+      .control-group
+        label.control-label(for='username') Username
+        .controls
+          input.form-control(type='text' id='username' placeholder='Username' required='')
+
+      .control-group
+        label.control-label(for='password') Password
+        .controls
+          input.form-control(type='text' id='password' placeholder='s3kr1t p@ssw0rd' required='')
+
+      .control-group
+        label.control-label(for='displayName') Full Name
+        .controls
+          input.form-control(type='text' id='displayName' placeholder='Full Name' required='')
+
+      .control-group
+        label.control-label(for='profile') Profile URL
+        .controls
+          input.form-control(type='url' id='profile' placeholder='http://www.example.com/' required='')
+
+      .control-group
+        label.control-label(for='email') Email
+        .controls
+          input.form-control(type='email' id='email' placeholder='me@example.com' required='')
+
+      .control-group
+        .controls
+          button.btn.btn-primary(type='button' id='register-button') Create user
