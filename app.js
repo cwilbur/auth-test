@@ -63,12 +63,11 @@ app.get('/logout', function(req, res) {
 // AUTHENTICATION ROUTES - REDIRECT
 
 app.post('/login_redirect', jsonParser);
-app.post('/login_redirect',
-  passport.authenticate('local'), {
+app.post('/login_redirect', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/'
-  })
-);
+  }));
+
 
 // REGISTRATION ROUTE
 
