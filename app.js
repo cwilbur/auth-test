@@ -17,10 +17,10 @@ app.use(morgan('dev'));
 // SESSION AND SESSION STORE
 
 var session = require('express-session');
-var MongoSessionDB = require('connect-mongodb-session')(session);
+var MongoStore = require('connect-mongo')(session);
 
-var mongoStore = new MongoSessionDB({
-  uri: 'mongodb://localhost/authTest',
+var mongoStore = new MongoStore({
+  mongooseConnection: mongoose.connection,
   collection: 'webSessions'
 });
 
@@ -64,16 +64,15 @@ app.get('/logout', function(req, res) {
 
 app.post('/login_redirect', jsonParser);
 app.post('/login_redirect', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/'
-  }));
+  successRedirect: '/',
+  failureRedirect: '/'
+}));
 
 
 // REGISTRATION ROUTE
 
 app.post('/register', jsonParser);
 app.post('/register', function(res, req, next) {
-
 
 });
 
